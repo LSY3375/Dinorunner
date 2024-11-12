@@ -20,4 +20,29 @@ public class GameManager : MonoBehaviour
 
     }
 
+
+    void Update()
+    {
+        //점수계산
+        if (!isLive) return;
+        
+        //델타타임과 점수를 통해 속도 증가
+        score += Time.deltaTime * 2;
+        globalspeed = ORIGIN_SPEED + score * 0.01f;
+        
+    }
+    public void GameOver()
+    {
+        uiover.SetActive(true);
+        isLive = false;
+
+        float highScore = PlayerPrefs.GetFloat("Score");
+        PlayerPrefs.SetFloat("Score", Mathf.Max(highScore, score));
+    }
+    public void reStart()
+    {
+        SceneManager.LoadScene(0);
+        score = 0;
+        isLive = true;
+    }
 }
