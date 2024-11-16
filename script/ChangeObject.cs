@@ -6,7 +6,7 @@ public class ChangeObject : MonoBehaviour
 {
     public GameObject[] objs;
 
-    //선인장 교체
+    //선인장(장애물) 교체
     public void Change()
     {
         int ran = Random.Range(0, objs.Length);
