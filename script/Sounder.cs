@@ -7,6 +7,7 @@ public class Sounder : MonoBehaviour
     public enum Sfx {Jump, Land, Hit, Reset }
     public AudioClip[] clips;
     AudioSource audios;
+    
     void Awake()
     {
         audios = GetComponent<AudioSource>();
