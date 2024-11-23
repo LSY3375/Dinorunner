@@ -17,9 +17,7 @@ public class GameManager : MonoBehaviour
         isLive = true;
         if(PlayerPrefs.HasKey("score"))
             PlayerPrefs.SetFloat("score", 0);
-
     }
-
 
     void Update()
     {
@@ -31,11 +29,12 @@ public class GameManager : MonoBehaviour
         globalspeed = ORIGIN_SPEED + score * 0.01f;
         
     }
+    
     public void GameOver()
     {
         uiover.SetActive(true);
         isLive = false;
-
+        
         float highScore = PlayerPrefs.GetFloat("Score");
         PlayerPrefs.SetFloat("Score", Mathf.Max(highScore, score));
     }
