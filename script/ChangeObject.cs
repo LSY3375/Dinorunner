@@ -12,8 +12,6 @@ public class ChangeObject : MonoBehaviour
         int ran = Random.Range(0, objs.Length);
 
         for (int index = 0; index < objs.Length; index++)
-        {
             transform.GetChild(index).gameObject.SetActive(ran == index);
-        }
     }
 }
