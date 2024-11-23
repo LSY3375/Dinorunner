@@ -19,6 +19,5 @@ public class scrobar : MonoBehaviour
         if (!GameManager.isLive) return;
 
         transform.Translate(GameManager.globalspeed * speedRate * Time.deltaTime * -1f, 0, 0);
-       
     }
 }
