@@ -6,6 +6,7 @@ public class ChangeSprite : MonoBehaviour
 {
     public Sprite[] sprites;
     SpriteRenderer spriter;
+    
     void Awake()
     {
         spriter = GetComponent<SpriteRenderer>();
