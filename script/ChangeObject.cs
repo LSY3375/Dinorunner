@@ -15,3 +15,4 @@ public class ChangeObject : MonoBehaviour
             transform.GetChild(index).gameObject.SetActive(ran == index);
     }
 }
+//
